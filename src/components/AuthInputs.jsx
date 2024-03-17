@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
-import Button from './Button.jsx';
-import Input from './Input.jsx'
+import Button from "./Button.jsx";
+import Input from "./Input.jsx";
 
 const ControlContainer = styled.div`
   display: flex;
@@ -9,9 +9,6 @@ const ControlContainer = styled.div`
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 `;
-
-
-
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -37,19 +34,19 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <ControlContainer>
         <Input
-        label = 'Email'
+          label="Email"
           $invalid={emailNotValid}
           type="email"
           onChange={(event) => handleInputChange("email", event.target.value)}
         />
         <Input
-        label = 'Password'
+          label="Password"
           $invalid={passwordNotValid}
           type="password"
-          onChange={(event) => handleInputChange("password", event.target.value)}
+          onChange={(event) =>
+            handleInputChange("password", event.target.value)
+          }
         />
-
-         
       </ControlContainer>
       <div className="actions">
         <button type="button" className="text-button">
